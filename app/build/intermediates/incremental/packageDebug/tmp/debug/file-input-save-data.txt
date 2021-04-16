@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Wed Jul 24 20:48:51 IST 2019
+1.base=C\:\\Users\\pranathireddy\\Downloads\\Interview preparation\\TimeTable\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=C\:\\Users\\pranathireddy\\Downloads\\Interview preparation\\TimeTable\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+1.path=classes.dex

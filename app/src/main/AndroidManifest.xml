@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ulan.timetable"
+    >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".Activities.HomeworksActivity"
+            android:label="@string/homeworks"
+            android:parentActivityName=".Activities.MainActivity" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".Activities.HomeworksActivity" />
+
+        <activity
+            android:name=".Activities.NotesActivity"
+            android:label="Notes"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.NoteInfoActivity"
+            android:label="Notes"
+            android:parentActivityName=".Activities.NotesActivity" />
+        <activity
+            android:name=".Activities.TeachersActivity"
+            android:label="Teachers"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".Activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.ExamsActivity"
+            android:label="Exams"
+            android:parentActivityName=".Activities.MainActivity" />
+
+        <receiver
+            android:name=".Utils.DailyReceiver"
+            android:enabled="true" />
+
+        <receiver
+            android:name=".Utils.WakeUpAlarmReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
